@@ -1,0 +1,55 @@
+{
+    "dataType":"cv",
+    "projectType":"classification",
+    "algoName":"r10525073_AlexNet",
+    "description": "AlexNet",
+    "lib":"keras",
+    "param":[
+        {
+            "name":"activation",
+            "description":"activation function in fully-connected layers",
+            "type":"enum",
+            "list":["relu","sigmoid","softmax","tanh","None"],
+            "default":"relu"
+        },
+        {
+            "name":"dropout",
+            "description":"dropout in fully connected layer",
+            "type":"float",
+            "lowerBound":0.0,
+            "upperBound":1.0,
+            "default":0.5
+        },
+        {
+            "name":"epochs",
+            "description":"train epochs",
+            "type":"int",
+            "lowerBound":5,
+            "upperBound":50,
+            "default":10
+        },
+        {
+            "name":"batch_size",
+            "description":"batch size of training",
+            "type":"int",
+            "lowerBound":4,
+            "upperBound":128,
+            "default":16
+        }
+    ],
+    "input":[
+        {
+            "name": "X",
+            "description": "input data",
+            "type":"path",
+            "amount":"single"
+        }
+    ],
+    "output":[
+        {
+            "name": "Y",
+            "description": "output data",
+            "type":"classifiable"
+        }
+    ]
+}
